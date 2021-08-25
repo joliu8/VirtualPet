@@ -16,6 +16,14 @@ void draw()
 fill(232, 121, 121);
 triangle(200,250,70,400,300,400);
 
+// left arm
+noStroke();
+rect(70,300,150,20);
+
+// right arm
+noStroke();
+rect(230,300,100,20);
+
   //big circle
 noStroke();
 fill(255, 204, 239);
@@ -53,7 +61,5 @@ ellipse(250,200,55,55);
 fill(255, 161, 213);
 arc(165, 225, 60, 60, 0, PI+QUARTER_PI);
 
-//arm
-rect(100,150,200,270);
 
 }
