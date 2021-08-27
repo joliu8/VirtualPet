@@ -3,7 +3,7 @@
 void setup()
 {
 size(500,500);
-smooth(3);
+smooth(4);
 }
 void draw()
 {
