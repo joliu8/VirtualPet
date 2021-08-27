@@ -100,5 +100,5 @@ void draw()
   
   //pink triangle
   fill(255, 204, 239);
-  triangle(100,105,165,105,124,133);
+  triangle(99,105,165,104,124,133);
 }
