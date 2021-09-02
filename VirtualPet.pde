@@ -125,4 +125,24 @@ void draw()
   //pink triangle
   fill(255, 204, 239);
   triangle(99,105,165,104,124,133);
+  
+ //fire
+  //fill(255, 132, 0);
+  if(leftButton >= 500) {
+    fill(0, 247, 255);
   }
+  else { 
+    fill(255, 132, 0);
+  }
+  ellipse(70,275,30,40);
+  ellipse(330,275,30,40);
+  //fill(255, 251, 3);
+  if(rightButton >= 500) {
+    fill(209, 254, 255);
+  }
+  else { 
+    fill(255, 251, 3);
+  }
+  ellipse(70,275,20,30);
+  ellipse(330,275,20,30);
+}
