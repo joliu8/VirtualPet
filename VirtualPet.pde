@@ -1,13 +1,36 @@
+import processing.serial.*;
+import cc.arduino.*;
+Arduino arduino;
 
+float cx = 150;
+float cy = 200; 
+int r = 100;
+int ry = 100;
+float t = 0;
+int leftButton = 0;
+int rightButton = 0;
 
 void setup()
 {
 size(500,500);
 smooth(4);
+arduino = new Arduino(this, Arduino.list()[1], 57600);
 }
 void draw()
 {
-
+  int y = arduino.analogRead(5);
+    if (y > 105) {
+    y = 105;
+  }
+  int r = arduino.analogRead(5);
+  int g = arduino.analogRead(5);
+  int b = arduino.analogRead(5);
+  leftButton = arduino.analogRead(6);
+  rightButton = arduino.analogRead(1);
+  
+  System.out.println(r);
+  background(r,0,0);
+  
   // left arm
   noStroke();
   fill(255, 204, 239);
@@ -96,10 +119,10 @@ void draw()
   
   //pupils
   fill(0,0,0);
-  ellipse(150,150,10,10);
-  ellipse(200,150,10,10);
+  ellipse(150,150+y,10,10);
+  ellipse(200,150+y,10,10);
   
   //pink triangle
   fill(255, 204, 239);
   triangle(99,105,165,104,124,133);
-}
+  }
